@@ -6,10 +6,8 @@ define(
     function (CommentModel) {
         return Backbone.Collection.extend({
             model: CommentModel,
-            localStorage: new Store("todos"),
             initialize: function (options) {
             }
         });
     }
 );
-    
