@@ -29,6 +29,8 @@ define(
 
                 $('.comment-list').html(commentListView.el);
                 $('.comment-form').html(commentFormView.el);
+
+                commentCollection.fetch();
             }
 
         }
