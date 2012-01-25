@@ -10,3 +10,6 @@
 [submodule "2 Comments/js/libs/underscore"]
 	path = 2 Comments/js/libs/underscore
 	url = https://github.com/documentcloud/underscore.git
+[submodule "2 Comments/js/libs/backbone"]
+	path = 2 Comments/js/libs/backbone
+	url = https://github.com/documentcloud/backbone.git
