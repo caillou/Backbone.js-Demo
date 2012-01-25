@@ -7,3 +7,6 @@
 [submodule "2 Comments/js/libs/md5"]
 	path = 2 Comments/js/libs/md5
 	url = https://github.com/blueimp/JavaScript-MD5.git
+[submodule "2 Comments/js/libs/underscore"]
+	path = 2 Comments/js/libs/underscore
+	url = https://github.com/documentcloud/underscore.git
