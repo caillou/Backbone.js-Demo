@@ -4,3 +4,6 @@
 [submodule "2 Comments/js/libs/moment"]
 	path = 2 Comments/js/libs/moment
 	url = https://github.com/timrwood/moment.git
+[submodule "2 Comments/js/libs/md5"]
+	path = 2 Comments/js/libs/md5
+	url = https://github.com/blueimp/JavaScript-MD5.git
