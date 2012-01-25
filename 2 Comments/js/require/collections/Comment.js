@@ -6,8 +6,7 @@ define(
     function (CommentModel) {
         return Backbone.Collection.extend({
             model: CommentModel,
-            initialize: function (options) {
-            }
+            localStorage: new Store("comment")
         });
     }
 );
