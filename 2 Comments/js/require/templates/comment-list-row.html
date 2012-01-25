@@ -1,1 +1,23 @@
-<h2>Recent Comments</h2>
+<div class="row">
+    <div class="span2">
+        <ul class="media-grid">
+            <li>
+                <a href="<%= comment.avatarUrl %>?s=512">
+                    <img class="thumbnail" src="<%= comment.avatarUrl %>?s=90" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="span5">
+        <h4>
+            <%= comment.name %>
+            <small>
+                <%= displayDate %>
+            </small>
+        </h4>
+        <p>
+            <%= comment.text %>
+        </p>
+    </div>
+    <div class="span1"></div>
+</div>
