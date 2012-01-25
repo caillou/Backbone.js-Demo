@@ -1,4 +1,4 @@
-# Demo Backbone.js
+# Backbone.js Demo
 
 ## Installation
 
