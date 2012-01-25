@@ -2,8 +2,11 @@
 /*global define: true, Backbone: true, _: true */
 
 define(
-    ['text!templates/comment-form.html'],
-    function (template) {
+    [
+        'models/Comment',
+        'text!templates/comment-form.html'
+    ],
+    function (CommentModel, template) {
         return Backbone.View.extend({
             events: {
                 'submit form': 'newComment'
@@ -17,8 +20,9 @@ define(
                     template
                 );
             },
+
             newComment: function (e) {
-                var options;
+                var options, comment;
 
                 e.preventDefault();
 
@@ -27,7 +31,11 @@ define(
                     options[field.name] = field.value;
                 });
 
-                console.log(options);
+                comment = new CommentModel(options);
+                comment.save();
+                this.commentCollection.add(comment);
+
+                this.$('input, textarea').val('');
             }
         });
     }
