@@ -3,10 +3,9 @@
 
 define(
     [
-        'text!templates/comment-list.html',
         'text!templates/comment-list-row.html'
     ],
-    function (listTemplate, listRowTemplate) {
+    function (listRowTemplate) {
         return Backbone.View.extend({
             initialize: function (options) {
 
