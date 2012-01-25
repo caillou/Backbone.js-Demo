@@ -47,3 +47,8 @@ body {
 .topbar .btn {
   border: 0;
 }
+
+.comment-list .thumbnail {
+    width: 90px;
+    height: 90px;
+}
