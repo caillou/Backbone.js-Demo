@@ -1,12 +1,12 @@
 /*jslint white: false, es5: false */
-/*global define: false, Backbone: false, _: false, console: false */
+/*global define: false, Backbone: false, _: false */
 
 define([], function () {
 
     var displaySomething, links, linksArray;
 
     linksArray = [
-        'q?:backbone',
+        'q?backbone',
         'show/42',
         'search/pierre/Zurich',
         'download/avatar/pierre/large'
@@ -15,7 +15,6 @@ define([], function () {
     links = $('<ul/>');
 
     _.each(linksArray, function (fragment) {
-        console.log(this, arguments);
         fragment = '#' + fragment;
         links.append('<li><a/></li>')
             .find('a:last')
@@ -25,11 +24,25 @@ define([], function () {
 
     displaySomething = function (displayString) {
         return function () {
+            var text, i, ii;
+
+            text = displayString;
+
+            if (arguments.length > 0) {
+                text += ': [';
+                text += _.map(
+                    Array.prototype.slice.call(arguments),
+                    function (string) {
+                        return '"' + string + '"';
+                    }
+                ).join(', ');
+                text += ']';
+            }
+
             $('body').html('<h1/>')
                 .append(links)
                 .find('h1')
-                .text(displayString);
-            console.log(arguments);
+                .text(text);
         };
     };
 
