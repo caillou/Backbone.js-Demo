@@ -1,5 +1,5 @@
 /*jslint white: false, es5: false */
-/*global define: true, Backbone: true, _: true */
+/*global define: false, Backbone: false, _: false, console: false */
 
 define([], function () {
     
