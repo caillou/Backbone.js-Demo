@@ -2,18 +2,18 @@
 /*global define: false, Backbone: false, _: false, console: false */
 
 define([], function () {
-    
+
     var displaySomething, links, linksArray;
-    
+
     linksArray = [
         'q?:backbone',
         'show/42',
         'search/pierre/Zurich',
         'download/avatar/pierre/large'
     ];
-    
+
     links = $('<ul/>');
-    
+
     _.each(linksArray, function (fragment) {
         console.log(this, arguments);
         fragment = '#' + fragment;
@@ -41,7 +41,7 @@ define([], function () {
             'show/:id': 'show',
             'search/:who/:where': 'search',
             'download/*path': 'download'
-            
+
         },
 
         index: displaySomething('index'),
