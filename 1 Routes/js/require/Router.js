@@ -2,6 +2,7 @@
 /*global define: false, Backbone: false, _: false */
 
 define([], function () {
+    "use strict";
 
     var displaySomething, links, linksArray;
 
