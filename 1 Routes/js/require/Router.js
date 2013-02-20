@@ -55,7 +55,6 @@ define([], function () {
             'show/:id': 'show',
             'search/:who/:where': 'search',
             'download/*path': 'download'
-
         },
 
         index: displaySomething('index'),
