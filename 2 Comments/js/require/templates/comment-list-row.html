@@ -1,14 +1,10 @@
 <div class="row">
-    <div class="span2">
-        <ul class="media-grid">
-            <li>
-                <a href="<%= comment.avatarUrl %>?s=512">
-                    <img class="thumbnail" src="<%= comment.avatarUrl %>?s=90" alt="">
-                </a>
-            </li>
-        </ul>
+    <div class="avatar-container">
+        <a href="<%= comment.avatarUrl %>?s=512">
+            <img class="img-polaroid" src="<%= comment.avatarUrl %>?s=90" alt="">
+        </a>
     </div>
-    <div class="span5">
+    <div>
         <h4>
             <%- comment.name %>
             <small>
@@ -19,5 +15,4 @@
             <%- comment.text %>
         </p>
     </div>
-    <div class="span1"></div>
 </div>
