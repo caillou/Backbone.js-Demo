@@ -4,6 +4,7 @@
 define(
     [],
     function () {
+        "use strict";
         return Backbone.Router.extend({
 
             routes: {
