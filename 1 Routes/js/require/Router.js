@@ -1,5 +1,5 @@
-/*jslint white: false, es5: false */
-/*global define: false, Backbone: false, _: false */
+/*jslint nomen: true */
+/*global define: false, Backbone: false, _: false, $: false */
 
 define([], function () {
     "use strict";

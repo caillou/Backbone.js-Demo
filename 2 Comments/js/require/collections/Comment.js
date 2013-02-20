@@ -1,5 +1,4 @@
-/*jslint white: false, es5: false */
-/*global define: true, Backbone: true, Store: true */
+/*global define: false, Backbone: false, Store: false */
 
 define(
     ['models/Comment'],

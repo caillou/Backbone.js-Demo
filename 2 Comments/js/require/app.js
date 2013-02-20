@@ -1,5 +1,4 @@
-/*jslint white: false, es5: false */
-/*global Backbone: true */
+/*global Backbone: true, require: true */
 
 require([ "Router" ], function (Router) {
     new Router();

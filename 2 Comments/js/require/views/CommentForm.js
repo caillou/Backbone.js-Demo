@@ -1,5 +1,5 @@
-/*jslint white: false, es5: false */
-/*global define: true, Backbone: true, _: true */
+/*jslint nomen: true */
+/*global define: true, Backbone: true, _: true, $: true */
 
 define(
     [

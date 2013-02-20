@@ -1,5 +1,4 @@
-/*jslint white: false, es5: false */
-/*global define: true, Backbone: true, Store: true, moment: true, md5: true */
+/*global define: false, Backbone: false, Store: false, moment: false, md5: false */
 
 define(
     [], 
