@@ -3,6 +3,7 @@
 require(
     [ "Router", 'i18n!nls/comment' ],
     function (Router, commentStrings) {
+        "use strict";
 
         // This is how you could get i18n to work with
         // require.js.
