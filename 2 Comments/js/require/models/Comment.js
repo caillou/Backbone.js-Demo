@@ -1,7 +1,7 @@
 /*global define: false, Backbone: false, Store: false, moment: false, md5: false */
 
 define(
-    [], 
+    [],
     function () {
         "use strict";
         return Backbone.Model.extend({
