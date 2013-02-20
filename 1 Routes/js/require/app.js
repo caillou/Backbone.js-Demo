@@ -2,5 +2,6 @@
 
 require([ "Router" ], function (Router) {
     new Router();
+    "use strict";
     Backbone.history.start();
 });
