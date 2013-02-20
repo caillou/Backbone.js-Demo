@@ -3,6 +3,7 @@
 define(
     [], 
     function () {
+        "use strict";
         return Backbone.Model.extend({
             localStorage: new Store("comment"),
             initialize: function (options) {
