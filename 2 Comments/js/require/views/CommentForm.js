@@ -7,6 +7,7 @@ define(
         'text!templates/comment-form.html'
     ],
     function (CommentModel, template) {
+        "use strict";
         var newComment = function (e) {
                 var options, comment;
 

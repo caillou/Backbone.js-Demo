@@ -6,6 +6,7 @@ define(
         'text!templates/comment-list-row.html'
     ],
     function (listRowTemplate) {
+        "use strict";
         return Backbone.View.extend({
             initialize: function (options) {
 
