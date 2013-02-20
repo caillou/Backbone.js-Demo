@@ -4,6 +4,7 @@ require(
     [ "Router", 'i18n!nls/comment' ],
     function (Router, commentStrings) {
         "use strict";
+        var router;
 
         // This is how you could get i18n to work with
         // require.js.
@@ -13,7 +14,9 @@ require(
         // http://requirejs.org/docs/api.html#i18n
         // console.log(commentStrings);
 
-        new Router();
+        // We need to assign the new Router() object
+        // to a variable, in order to make jslint happy.
+        router = new Router();
         Backbone.history.start();
     }
 );
