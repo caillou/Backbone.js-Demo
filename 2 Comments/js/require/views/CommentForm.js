@@ -7,21 +7,7 @@ define(
         'text!templates/comment-form.html'
     ],
     function (CommentModel, template) {
-        return Backbone.View.extend({
-            events: {
-                'submit form': 'newComment'
-            },
-            initialize: function (options) {
-                this.commentCollection = options.commentCollection;
-                this.render();
-            },
-            render: function () {
-                $(this.el).html(
-                    template
-                );
-            },
-
-            newComment: function (e) {
+        var newComment = function (e) {
                 var options, comment;
 
                 e.preventDefault();
@@ -36,6 +22,19 @@ define(
                 this.commentCollection.add(comment);
 
                 this.$('input, textarea').val('');
+            };
+        return Backbone.View.extend({
+            events: {
+                'submit form': newComment
+            },
+            initialize: function (options) {
+                this.commentCollection = options.commentCollection;
+                this.render();
+            },
+            render: function () {
+                $(this.el).html(
+                    template
+                );
             }
         });
     }
