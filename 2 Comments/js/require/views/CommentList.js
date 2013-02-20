@@ -3,9 +3,10 @@
 
 define(
     [
-        'text!templates/comment-list-row.html'
+        'text!templates/comment-list-row.html',
+        'text!templates/comment-list-empty.html'
     ],
-    function (listRowTemplate) {
+    function (listRowTemplate, emptyListTemplate) {
         "use strict";
         return Backbone.View.extend({
             listRowTemplate: _.template(listRowTemplate),
@@ -17,12 +18,22 @@ define(
             },
 
             renderRows: function (commentCollection) {
+                if (commentCollection.size() === 0) {
+                    $(this.el).prepend(emptyListTemplate);
+                    return;
+                }
+
                 commentCollection.each(function (commentModel) {
                     this.renderRow(commentModel);
                 }, this);
             },
 
-            renderRow: function (commentModel) {
+            renderRow: function (commentModel, commentCollection) {
+                if (commentCollection && commentCollection.size() === 1) {
+                    // This is the first comment. Let's remove the
+                    // comment-list-empty message from our element.
+                    $(this.el).html('');
+                }
                 $(this.el).prepend(
                     this.listRowTemplate({
                         comment: commentModel.toJSON(),
