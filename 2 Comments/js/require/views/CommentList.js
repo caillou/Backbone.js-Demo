@@ -8,10 +8,9 @@ define(
     function (listRowTemplate) {
         "use strict";
         return Backbone.View.extend({
+            listRowTemplate: _.template(listRowTemplate),
+
             initialize: function (options) {
-
-                this.listRowTemplate = _.template(listRowTemplate);
-
                 this.commentCollection = options.commentCollection;
                 this.commentCollection.bind('reset', this.renderRows, this);
                 this.commentCollection.bind('add', this.renderRow, this);
