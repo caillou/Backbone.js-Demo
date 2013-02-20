@@ -2,12 +2,8 @@
 /*global define: false, Backbone: false, _: false, require: false, $: false */
 
 define(
-    [
-        'collections/Comment',
-        'views/CommentList',
-        'views/CommentForm'
-    ],
-    function (CommentCollection, CommentListView, CommentFormView) {
+    [],
+    function () {
         return Backbone.Router.extend({
 
             routes: {
@@ -15,22 +11,31 @@ define(
             },
 
             indexController : function () {
-                var commentCollection, commentListView, commentFormView;
+                require(
+                    [
+                        'collections/Comment',
+                        'views/CommentList',
+                        'views/CommentForm'
+                    ],
+                    function (CommentCollection, CommentListView, CommentFormView) {
+                        var commentCollection, commentListView, commentFormView;
 
-                commentCollection = new CommentCollection();
+                        commentCollection = new CommentCollection();
 
-                commentListView = new CommentListView({
-                    commentCollection: commentCollection
-                });
+                        commentListView = new CommentListView({
+                            commentCollection: commentCollection
+                        });
 
-                commentFormView = new CommentFormView({
-                    commentCollection: commentCollection
-                });
+                        commentFormView = new CommentFormView({
+                            commentCollection: commentCollection
+                        });
 
-                $('.comment-list').html(commentListView.el);
-                $('.comment-form').html(commentFormView.el);
+                        commentCollection.fetch();
 
-                commentCollection.fetch();
+                        $('.comment-list').html(commentListView.el);
+                        $('.comment-form').html(commentFormView.el);
+                    }
+                );
             }
 
         }
